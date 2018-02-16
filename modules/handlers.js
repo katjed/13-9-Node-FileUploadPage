@@ -36,12 +36,20 @@ exports.show = function(request, response) {
 }
 
 exports.style = function(request, response) {
-    fs.readFile('css/start.css', 'css/upload.css', function(error, css) {
+    fs.readFile('css/start.css', function(error, css) {
         response.writeHead(200, {"Content-Type": "text/css"});
         response.write(css);
         response.end();
     });
-}
+};
+
+exports.uploadStyle = function(request, response) {
+    fs.readFile('css/upload.css', function(error, css) {
+        response.writeHead(200, {"Content-Type": "text/css"});
+        response.write(css);
+        response.end();
+    });
+};
 
 exports.error = function(request, response) {
     console.log("Nie wiem co robić.");

@@ -24,6 +24,9 @@ function start() {
     	 case '/style':
             handlers.style(request, response);
             break;
+        case '/uploadStyle':
+            handlers.uploadStyle(request, response);
+            break;
         default:
             handlers.error(request, response);
     }
