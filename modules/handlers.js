@@ -41,7 +41,7 @@ exports.style = function(request, response) {
         response.write(css);
         response.end();
     });
-};
+}
 
 exports.uploadStyle = function(request, response) {
     fs.readFile('css/upload.css', function(error, css) {
@@ -49,7 +49,7 @@ exports.uploadStyle = function(request, response) {
         response.write(css);
         response.end();
     });
-};
+}
 
 exports.error = function(request, response) {
     console.log("Nie wiem co robić.");
